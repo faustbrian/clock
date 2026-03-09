@@ -1,12 +1,14 @@
 ## Table of Contents
 
-1. Overview (`docs/README.md`)
-2. Decorators (`docs/decorators.md`)
-3. Examples (`docs/examples.md`)
-4. Implementations (`docs/implementations.md`)
-5. Laravel (`docs/laravel.md`)
-6. Testing (`docs/testing.md`)
-7. Utilities (`docs/utilities.md`)
+1. [Overview](#doc-docs-readme) (`docs/README.md`)
+2. [Decorators](#doc-docs-decorators) (`docs/decorators.md`)
+3. [Examples](#doc-docs-examples) (`docs/examples.md`)
+4. [Implementations](#doc-docs-implementations) (`docs/implementations.md`)
+5. [Laravel](#doc-docs-laravel) (`docs/laravel.md`)
+6. [Testing](#doc-docs-testing) (`docs/testing.md`)
+7. [Utilities](#doc-docs-utilities) (`docs/utilities.md`)
+<a id="doc-docs-readme"></a>
+
 Clock is a PSR-20 compliant clock abstraction for PHP that provides multiple implementations for different use cases, including Carbon, DateTime, and specialized testing clocks.
 
 ## Requirements
@@ -75,11 +77,13 @@ $now = Clock::now();
 
 ## Next Steps
 
-- [Clock Implementations](./implementations.md) - Detailed guide to all clock types
-- [Testing Strategies](./testing.md) - Patterns for testing time-dependent code
-- [Laravel Integration](./laravel.md) - Service provider, facade, and DI
-- [Decorators](./decorators.md) - Caching and logging decorators
-- [Examples](./examples.md) - Real-world usage patterns
+- [Clock Implementations](#doc-docs-implementations) - Detailed guide to all clock types
+- [Testing Strategies](#doc-docs-testing) - Patterns for testing time-dependent code
+- [Laravel Integration](#doc-docs-laravel) - Service provider, facade, and DI
+- [Decorators](#doc-docs-decorators) - Caching and logging decorators
+- [Examples](#doc-docs-examples) - Real-world usage patterns
+
+<a id="doc-docs-decorators"></a>
 
 The clock package includes decorator classes that wrap any `ClockInterface` implementation to add caching or logging capabilities.
 
@@ -277,6 +281,8 @@ class ClockServiceProvider extends ServiceProvider
     }
 }
 ```
+
+<a id="doc-docs-examples"></a>
 
 Practical examples demonstrating common use cases for the clock package.
 
@@ -835,6 +841,8 @@ test('complete subscription workflow', function () {
 });
 ```
 
+<a id="doc-docs-implementations"></a>
+
 The clock package provides multiple implementations of the PSR-20 `ClockInterface`, each designed for specific use cases.
 
 ## Production Clocks
@@ -1094,6 +1102,8 @@ $frozen->now(); // Fixed at freeze moment
 | Ordered operations | `SequenceClock` |
 | Future/past scenarios | `OffsetClock` |
 | Complex scenarios | `MockClock` |
+
+<a id="doc-docs-laravel"></a>
 
 The clock package integrates seamlessly with Laravel through automatic service provider registration and facade support.
 
@@ -1422,6 +1432,8 @@ test('processes renewal at correct time', function () {
 4. **Use the facade sparingly** - Prefer constructor injection for better testability
 5. **Test time-dependent logic** - Always write tests for code that depends on time
 
+<a id="doc-docs-testing"></a>
+
 Testing time-dependent code can be challenging. The clock package provides multiple strategies to make your tests deterministic, fast, and reliable.
 
 ## Basic Testing with FrozenClock
@@ -1740,6 +1752,8 @@ test('handles daylight saving transition', function () {
     // Test your DST-sensitive logic here
 });
 ```
+
+<a id="doc-docs-utilities"></a>
 
 The clock package includes several utilities to simplify common operations.
 
