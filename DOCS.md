@@ -1,12 +1,12 @@
 ## Table of Contents
 
-1. [Overview](#doc-docs-readme) (`docs/README.md`)
-2. [Decorators](#doc-docs-decorators) (`docs/decorators.md`)
-3. [Examples](#doc-docs-examples) (`docs/examples.md`)
-4. [Implementations](#doc-docs-implementations) (`docs/implementations.md`)
-5. [Laravel](#doc-docs-laravel) (`docs/laravel.md`)
-6. [Testing](#doc-docs-testing) (`docs/testing.md`)
-7. [Utilities](#doc-docs-utilities) (`docs/utilities.md`)
+1. [Overview](#doc-docs-readme)
+2. [Decorators](#doc-docs-decorators)
+3. [Examples](#doc-docs-examples)
+4. [Implementations](#doc-docs-implementations)
+5. [Laravel](#doc-docs-laravel)
+6. [Testing](#doc-docs-testing)
+7. [Utilities](#doc-docs-utilities)
 <a id="doc-docs-readme"></a>
 
 Clock is a PSR-20 compliant clock abstraction for PHP that provides multiple implementations for different use cases, including Carbon, DateTime, and specialized testing clocks.
